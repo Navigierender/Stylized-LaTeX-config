@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage[sfdefault,light]{FiraSans}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+\geometry{
+    a4paper,
+    left=20mm,
+    top=20mm
+}
+
+% colorpalett https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
+\definecolor{black}{HTML}{212529}
+\definecolor{gray}{HTML}{343A40}
+\definecolor{lightgray}{HTML}{ADB5BD}
+
+\newcommand*{\Svspace}{ \par\vspace{3pt}\par }
+\newcommand*{\Mvspace}{ \par\vspace{2ex}\par }
+\newcommand*{\Lvspace}{ \par\vspace{6ex}\par }
+
+\newcommand{\thinrule}{
+\par\Mvspace
+\color{gray} \hrule height 0.2pt \color{black}
+\Mvspace\par
+}
+
+\newenvironment{quoteB}{
+    \begin{tcolorbox}[
+        enhanced,
+        frame hidden,
+        borderline west={1.6pt}{2ex}{lightgray}, 
+        boxsep=1pt,
+        left skip=0pt,
+        boxrule=0pt,
+        colback=white,
+        parbox=false,
+        right skip=0pt,
+        right=0pt,
+        parskip=\Mvspace
+    ]
+}
+{
+    \end{tcolorbox}
+}
