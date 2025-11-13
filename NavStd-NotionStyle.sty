@@ -3,6 +3,8 @@
 \RequirePackage{geometry}
 \RequirePackage{xcolor}
 \RequirePackage{tcolorbox}
+\RequirePackage{titlesec}
+\RequirePackage{amsmath}
 \tcbuselibrary{skins}
 \RequirePackage[sfdefault,light]{FiraSans}
 \RequirePackage[T1]{fontenc}
@@ -15,16 +17,17 @@
 }
 
 \definecolor{black}{HTML}{212529}
-\definecolor{gray}{HTML}{343A40}
+\definecolor{gray}{HTML}{6C757D}
 \definecolor{lightgray}{HTML}{ADB5BD}
+\definecolor{tintedwhite}{HTML}{F8F9FA}
 
-\newcommand*{\Svspace}{ \par\vspace{3pt}\par }
-\newcommand*{\Mvspace}{ \par\vspace{2ex}\par }
-\newcommand*{\Lvspace}{ \par\vspace{6ex}\par }
+\newcommand*{\Svspace}{\vspace{6pt}}
+\newcommand*{\Mvspace}{\vspace{2ex}}
+\newcommand*{\Lvspace}{\vspace{6ex}}
 
 \newcommand{\thinrule}{
 \par\Mvspace
-\color{gray} \hrule height 0.2pt \color{black}
+\color{lightgray} \hrule height 0.2pt \color{black}
 \Mvspace\par
 }
 
@@ -32,8 +35,10 @@
     \begin{tcolorbox}[
         enhanced,
         frame hidden,
-        borderline west={1.6pt}{2ex}{lightgray}, 
+        borderline west={1.6pt}{0pt}{lightgray},
         boxsep=1pt,
+        top=0pt,
+        bottom=0pt,
         left skip=0pt,
         boxrule=0pt,
         colback=white,
@@ -46,3 +51,26 @@
 {
     \end{tcolorbox}
 }
+
+\newtcolorbox{Nbox}{
+  enhanced,
+  colback=tintedwhite,
+  colframe=lightgray,
+  boxrule=0.2pt,
+  arc=3pt, 
+  boxsep=1mm, 
+  halign=center,
+  valign=center,
+  after skip=1em,
+  before skip=1em
+}
+
+\expandafter\def\expandafter\normalsize\expandafter{%
+    \normalsize%
+    \setlength\abovedisplayskip{0pt}%
+    \setlength\belowdisplayskip{8pt}%
+    \setlength\abovedisplayshortskip{-8pt}%
+    \setlength\belowdisplayshortskip{-8pt}%
+}
+
+\titlespacing*{\section}{0pt}{0pt}{3pt}
