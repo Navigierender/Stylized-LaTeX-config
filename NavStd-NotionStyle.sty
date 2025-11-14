@@ -1,5 +1,5 @@
-%NavStd-NotionStyle by Navigierender 
-%https://github.com/Navigierender/Stylized-LaTeX-config
+% NavStd-NotionStyle by Navigierender 
+% https://github.com/Navigierender/Stylized-LaTeX-config
 
 \ProvidesPackage{NavStd-NotionStyle}[2025/11/13]
 
@@ -57,17 +57,23 @@
 }
 
 \newtcolorbox{Nbox}{
-  enhanced,
-  colback=white,
-  colframe=tintedwhite,
-  boxrule=1.6pt,
-  arc=2ex, 
-  boxsep=1mm, 
-  halign=center,
-  valign=center,
-  after skip=1em,
-  before skip=1em
+    enhanced,
+    colback=white,
+    colframe=tintedwhite,
+    boxrule=1.6pt,
+    arc=2ex, 
+    boxsep=1mm, 
+    halign=center,
+    valign=center,
+    after skip=1em,
+    before skip=1em
 }
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{gray}}
+  {\thesubsection}
+  {1em}
+  {}
 
 \expandafter\def\expandafter\normalsize\expandafter{%
     \normalsize%
@@ -78,3 +84,10 @@
 }
 
 \titlespacing*{\section}{0pt}{0pt}{3pt}
+
+\AtBeginDocument{
+    \raggedright
+    \mathcode`|=\string"8000
+    \begingroup\lccode`\~=`\|
+    \lowercase{\endgroup\def~}{\mathrel{\vert}}
+    }
