@@ -11,3 +11,4 @@
 | Global Style  | Page Geometry          | Sets the page margins.          | A4 paper with equal 20mm margins (left and top margins explicitly set). |
 | Global Style  | Colors                 | Defines custom colors.          | Defines `black` (212529), `gray` (6C757D), `lightgray` (ADB5BD), and `tintedwhite` (F8F9FA). |
 | Global Style  | Spacing                | Display math spacing.           | Reduces vertical space above and below displayed equations (`\abovedisplayskip`, `\belowdisplayskip`) for a tighter look. |
+! Use Tabu rather than tabular since Tabular isnt changed using this Style !
