@@ -38,6 +38,23 @@
 \Mvspace\par
 }
 
+\newcommand{\used}[1]{
+    \tcbox[
+        enhanced,
+        frame hidden,
+        boxrule=0pt,
+        colback=tintedwhite, 
+        arc=2mm, 
+        left=1pt,
+        right=1pt,
+        top=1pt,
+        bottom=1pt,
+        nobeforeafter,
+        before upper={\small\itshape},
+        after upper={}
+    ]{\color{gray}{#1}}
+}
+
 \newenvironment{quoteB}{
     \begin{tcolorbox}[
         enhanced,
