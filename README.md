@@ -1,6 +1,7 @@
 # NoStyle
 ---
 *Notion-Style is now deprecated since it does not use the same Enviroments*
+
 Custom clean LaTeX style package with a Notion-inspired aesthetic. Built on Fira Sans and Fira Mono.
 
 ---
